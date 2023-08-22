@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#main-container {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 2fr 3fr 2fr;
+    padding: 0 1rem;
+}
+
+.section-subheading {
+    margin: 0;
+    padding: 0.5rem;
+    border-bottom: 1px solid rgb(201, 187, 187);
+}
+
+.container {
+    border: 1px solid rgb(201, 187, 187);
+    border-radius: 8px;
+    position: relative;
+    height: 80vh;
+    max-height: 90%;
+}
+
+.column {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+input {
+    height: 3rem;
+    font-size: large;
+    border: 1px solid rgb(243, 219, 219);
+    padding: 8px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+input[type="text"] {
+    width: 100%;
+}
+
+input[type="button"] {
+    background-color: rgb(241, 216, 243);
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: rgb(232, 194, 235);
+}
+
+.row-container {
+    padding: 0.5rem;
+    display: flex;
+    background-color: rgb(160, 252, 252);
+    gap: 8px;
+    border-radius: 8px;
+}
+
+#users-list,
+#chat-messages,
+#rooms-list {
+    overflow-y: auto;
+}
+
+#users-container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.sender-name,
+.room-creator {
+    font-size: small;
+    color: brown;
+    font-weight: 700;
+}
+
+.message-text,
+.room-name {
+    font-weight: 400;
+    font-size: large;
+}
+
+p {
+    margin: 0;
+}
+
+.room,
+.username {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    gap: 1px;
+    padding: 0.25rem 0.5rem;
+    justify-self: end;
+    cursor: pointer;
+    border-radius: 8px;
+
+}
+
+.my-message {
+    align-self: end;
+    justify-content: end;
+}
+
+.room:hover {
+    background-color: aqua;
+}
+
+.my-room {
+    background-color: rgba(0, 255, 26, 0.155);
+}
+.my-room:hover{
+    background-color: rgba(0, 255, 26, 0.155);
+}
+
+.announcement {
+    background-color: rgba(0, 255, 26, 0.155);
+    padding: 0.5rem 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 8px;
+    border: 1px solid rgb(237, 211, 211);
+    text-align: center;
+
+}
+
+#chat-messages,
+#users-list {
+    display: flex;
+    flex-flow: column;
+    background-color: rgb(246, 249, 252);
+    gap: 8px;
+}
+
+.message-bubble {
+    padding: 0.2rem 0.4rem;
+    display: inline-block;
+    max-width: 100%;
+    border: 1px solid rgb(237, 211, 211);
+    border-radius: 0 8px 8px 8px;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    background-color: white;
+    box-shadow: 2px 4px 5px 0px rgb(224, 217, 217);
+}
+
+.message {
+    padding: 0 0.5rem;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    display: flex;
+    cursor: pointer;
+}
+
+.my-message .message-bubble {
+    border-radius: 8px 0 8px 8px;
+}
+
+.me {
+    font-weight: bold;
+}
+

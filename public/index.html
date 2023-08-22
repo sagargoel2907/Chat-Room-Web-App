@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center;">Chat App</h1>
+    <section id="main-container"">
+      <section class="container" id="users-container">
+        <h2 class="section-subheading">Users - (<span class="joined-room"></span>)</h2>
+        <section id="users-list">
+        </section>
+      </section>
+
+      <section class="container column" id="chats-container">
+        <h2 class="section-subheading">Chat - (<span class="joined-room"></span>)</h2>
+        <section id="chat-messages">
+        </section>
+        <section class="row-container">
+            <input type="text" placeholder="Enter message" id="message-input"/>
+            <input id="send-message-btn" type="button" value="Send"/>
+        </section>
+      </section>
+
+      <section class="container column" id="rooms-container">
+        <h2 class="section-subheading">Rooms</h2>
+        <section id="rooms-list">
+        </section>
+        <section class="row-container">
+            <input type="text" placeholder="Enter new room name" id="room-input">
+            <input id="add-room-btn" value="Create" type="button">
+        </section>
+      </section>
+    </section>
+  </body>
+  <script src="./app.js"></script>
+</html>
